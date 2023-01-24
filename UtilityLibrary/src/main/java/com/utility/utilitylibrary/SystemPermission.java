@@ -49,7 +49,7 @@ public class SystemPermission
         {
             if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE))
             {
-                Utility.setPermissionDenied(mActivity, permissionExtStorage, true,PREF_KEY);
+                Utility.setPermissionDenied(mActivity, permissionExtStorage, true);
                 AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
                 builder.setTitle(permissionStorageTitle);
                 builder.setPositiveButton(android.R.string.ok, null);
@@ -59,7 +59,7 @@ public class SystemPermission
             }
             else
             {
-                if((Utility.isPermissionDenied(mActivity, permissionExtStorage,PREF_KEY)))
+                if((Utility.isPermissionDenied(mActivity, permissionExtStorage)))
                 {
                     // redirect to settings
                     Utility.showToast(mActivity, permissionStorageDescription);
@@ -85,7 +85,7 @@ public class SystemPermission
             if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity,
                     Manifest.permission.CAMERA))
             {
-                Utility.setPermissionDenied(mActivity, permissionCamera, true,PREF_KEY);
+                Utility.setPermissionDenied(mActivity, permissionCamera, true);
                 AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
                 builder.setTitle(permissionCameraTitle);
                 builder.setPositiveButton(android.R.string.ok, null);
@@ -95,7 +95,7 @@ public class SystemPermission
             }
             else
             {   // became - shouldshowrequestRationale = true from here on permission denial.
-                if((Utility.isPermissionDenied(mActivity, permissionCamera,PREF_KEY)))
+                if((Utility.isPermissionDenied(mActivity, permissionCamera)))
                 {
                     // redirect to settings
                     Utility.showToast(mActivity,permissionCameraDescription);
@@ -120,7 +120,7 @@ public class SystemPermission
         {
             if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, Manifest.permission.ACCESS_COARSE_LOCATION))
             {
-                Utility.setPermissionDenied(mActivity, permissionLocation, true,PREF_KEY);
+                Utility.setPermissionDenied(mActivity, permissionLocation, true);
                 AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
                 builder.setTitle(permissionFineLocationTitle);
                 builder.setPositiveButton(android.R.string.ok, null);
@@ -131,7 +131,7 @@ public class SystemPermission
             }
             else
             {   // became - shouldshowrequestRationale = true from here on permission denial.
-                if((Utility.isPermissionDenied(mActivity, permissionLocation,PREF_KEY)))
+                if((Utility.isPermissionDenied(mActivity, permissionLocation)))
                 {
                     // redirect to settings
                     Utility.showToast(mActivity, permissionLocationDescription);
